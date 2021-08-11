@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Navigation from './components/Navigation';
-import Rank from './components/Rank';
 import FaceDetection from './components/FaceDetection';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import Navigation from './components/Navigation';
+import Rank       from './components/Rank';
+import SignIn     from './components/SignIn';
+import SignUp     from './components/SignUp';
 
 class App extends React.Component {
   constructor(){
