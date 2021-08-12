@@ -46,7 +46,7 @@ class FaceDetection extends React.Component {
         })
         .catch(error => console.log(error))
       }
-       this.displayFaceBox(this.calculateFaceLocation(response));
+       this.displayFaceBox(this.calculateFaceLocation(data));
       })
     .catch(err => console.log('Bad Image Url!'));
   }
