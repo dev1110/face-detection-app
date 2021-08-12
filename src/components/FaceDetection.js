@@ -16,6 +16,9 @@ class FaceDetection extends React.Component {
 
   onImageUrlSubmit =() => {
     this.setState({imageUrl:this.state.input});
+    if(this.state.input==''){
+      return false;
+    }
     fetch('https://tranquil-refuge-48785.herokuapp.com/imageurl',{
       method: 'post', 
       headers: {'Content-Type': 'application/json'},
@@ -24,8 +27,8 @@ class FaceDetection extends React.Component {
       })
     })
     .then(response => response.json())
-    .then(response => {
-      if(response){
+    .then(data => {
+      if(data !== 'failed'){
         fetch('https://tranquil-refuge-48785.herokuapp.com/image',{
           method: 'put', 
           headers: {'Content-Type': 'application/json'},
